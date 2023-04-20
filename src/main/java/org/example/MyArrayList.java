@@ -38,7 +38,7 @@ public class MyArrayList<T>{
         for (int i = 0; i < size; i++)
             tmpArray[i] = array[i];
 
-        array = new Object[tmpArray.length];
+        array = new Object[capacity];
         for (int i=0; i < size; i++) {
             array[i] = (T) tmpArray[i];
         }
@@ -80,7 +80,7 @@ public class MyArrayList<T>{
     }
 
     public void clear() {
-        this.capacity = 10;
+        this.capacity = 2;
         this.size = 0;
         array = new Object[capacity];
     }
